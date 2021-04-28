@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MQTT</title>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <h1 class="text-center">MQTT</h1>
+  <center>
+  <div class="container">
+  <div class="column">
+    <div class="col-sm-4" >
+      <div class="card" style="background-color: rgb(150, 196, 207);">
+        <div class="card-body">
+          <h5 class="card-title">Publish</h5>
+          <label> Topic: </label> &nbsp; &nbsp; <input type="text" id="pub-topic"><br>
+          <label>Payload: </label> <input type="text" id="pub-payload"> <br><br>
+          <button class="btn btn-outline-primary" id="btn-pub">Publish</button>
+
+        </div>
+        
+        
+            <div class="card-body pb-5">
+              <h5 class="card-title">Subscribe</h5>
+              <label> Topic: </label> <input type="text" id="sub-topic"> <br><br>
+              <button class="btn btn-outline-primary" id="btn-sub">Subscribe</button>
+            </div>
+          
+      
+      </div>
+    </div>
+    <!-- <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Subscribe</h5>
+          <label> Topic: </label> <input type="text" id="sub-topic"> <br>
+          <button class="btn btn-outline-primary" id="btn-sub">Subscribe</button>
+        </div>
+      </div>
+    </div> -->
+    <br><br>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body" style="background-color: rgb(210, 151, 212);"> 
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Topic</th>
+                <th scope="col">Payload</th>
+              </tr>
+            </thead>
+            <tbody id="t-body">
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</center>
+</body>
+<script src="./browserMqtt.js"></script>
+<script src="./index.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</html>
